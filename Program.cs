@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Advent2021.Runner.Extensions;
+using Advent2020.Runner.Extensions;
 
-namespace Advent2021.Runner
+namespace Advent2020.Runner
 {
     class Program
     {
