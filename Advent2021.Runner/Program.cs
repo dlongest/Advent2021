@@ -65,7 +65,7 @@ namespace Advent2021.Runner
 
             private string GetDay(string toRun)
             {
-                var regex = new System.Text.RegularExpressions.Regex(@"[1-2][0-9]");
+                var regex = new System.Text.RegularExpressions.Regex(@"[1-2]?[0-9]");
 
                 if (!regex.IsMatch(toRun))
                 {
