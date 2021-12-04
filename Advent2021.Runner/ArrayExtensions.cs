@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Advent2021.Runner.Extensions
 {
-    public static class ArrayExtensions
+    public static partial class ArrayExtensions
     {
 
         public static IEnumerable<Tuple<T, T>> Pair<T>(this IEnumerable<T> values)

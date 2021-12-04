@@ -81,5 +81,57 @@ namespace Advent2021.Tests
                 return this.GetEnumerator();
             }
         }
+
+
+        [Fact]
+        public void MostCommonValue_FindsCorrectValueWhenNoTie()
+        {
+            var input = new[] { 1, 1, 1, 0, 0, 0, 1 };
+
+            var expected = 1;
+
+            var actual = input.MostCommonValue(-1);
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void MostCommonValue_ReturnsCorrectValue_WhenCollectionIsHomogeneous()
+        {
+            var input = new[] { 1, 1, 1, 1 };
+
+            var expected = 1;
+
+            var actual = input.MostCommonValue(-1);
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void MostCommonValue_ReturnsParameter_OnTie()
+        {
+            var input = new[] { 1, 1, 1, 0, 0, 0, 1, 2, 0};
+
+            var expected = -1;
+
+            var actual = input.MostCommonValue(-1);
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void MostCommonValue_TakesCorrectSliceOfMultidimStructure()
+        {
+            var expected = new[] { 1, 0, 0 };
+
+            var multi = new List<int[]>() { new int[] { 1, 0, 1 }, new int[] { 1, 0, 0 }, new int[] { 1, 0, 0 } };
+
+            foreach (var index in Enumerable.Range(0, multi.First().Length))
+            {
+                var actual = multi.MostCommonValue(index, -1);
+
+                Assert.Equal(expected[index], actual);
+            }
+        }
     }
 }
