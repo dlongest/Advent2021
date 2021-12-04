@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayExtensionsTests.cs" />
+    <Compile Include="Day4Tests.cs" />
     <Compile Include="Day3Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

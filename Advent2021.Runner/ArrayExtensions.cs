@@ -46,5 +46,10 @@ namespace Advent2021.Runner.Extensions
             
             return subset.ToArray();
         }
+
+        public static T[] Slice<T>(this IEnumerable<T[]> ar, int columnIndex)
+        {
+            return ar.Select(v => v[columnIndex]).ToArray();
+        }
     }
 }
